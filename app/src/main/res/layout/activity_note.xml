@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4C94E3"
+    tools:context=".NoteActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/saveBtn"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="52dp"-->
+<!--                android:layout_marginBottom="52dp"-->
+<!--                android:background="@drawable/button_border"-->
+<!--                android:backgroundTint="#4C94E3"-->
+<!--                android:contentDescription="saveBtn"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:srcCompat="@drawable/save_btn" />-->
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/noteTitle"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="Title"
+                android:inputType="textMultiLine"
+                android:padding="5dp"
+                android:textColorHint="#615A5A"
+                android:textSize="24dp"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/noteDesc"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@null"
+                android:gravity="start"
+                android:scrollbars="vertical"
+                android:hint="Enter description"
+                android:inputType="textMultiLine"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:textColorHint="#4C4747"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toTopOf="@+id/saveBtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/noteTitle" />
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/save_btn_border"
+                android:backgroundTint="#4C94E3"
+                android:contentDescription="saveBtn"
+                android:text="Save"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
